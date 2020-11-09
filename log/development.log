@@ -17373,3 +17373,17 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 90ms (Views: 69.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 192.168.16.1 at 2020-11-09 23:26:09 +0000
+Started GET "/" for 192.168.16.1 at 2020-11-09 23:26:09 +0000
+Processing by StaticPagesController#home as HTML
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb
+  Rendering static_pages/home.html.erb
+  Rendered static_pages/home.html.erb (6035.8ms)
+  Rendered static_pages/home.html.erb (6143.3ms)
+Completed 200 OK in 6200ms (Views: 6172.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 6211ms (Views: 6195.8ms | ActiveRecord: 0.0ms)
+
+
