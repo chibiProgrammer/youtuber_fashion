@@ -1,0 +1,14 @@
+create_table "users", force: :cascade do |t|
+    t.string "youtuber_name",  comment: "Youtuber名"
+    t.string "image_url",  comment: "商品画像"
+    t.integer "group_id", comment: "グループID"
+    t.integer "brand_id", comment: "ブランドID"
+    t.integer "age", comment: "年齢"
+    t.string "infomation", comment: "ユーザー情報"
+    t.string "birthplace", comment: "出身地"
+    t.string "height", comment: "身長"
+    t.string "youtube_url", comment: "個人チャンネルURL"
+    t.boolean "deleted_flag", comment: "削除フラグ"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+end

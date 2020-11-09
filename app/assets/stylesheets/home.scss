@@ -1,0 +1,108 @@
+// header
+
+.y_header{
+    width: 100%;
+    background-color: #D89C9C;
+}
+
+.y_header_bar{
+    width: 100%;
+    height: 60px;
+}
+
+.y_header_bar .logo a{
+    color: white;
+}
+.y_header_bar .logo{
+    text-align: center;
+}
+
+// main
+main{
+    padding: 60px 450px;
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    height: 100px;
+}
+
+.menu .menu-item{
+    height: 50px;
+    width: 150px;
+    padding: 13px;
+    border-radius: 10px;
+    color: white;
+    background-color: #D89C9C;
+    text-align:center;
+    margin: 0 auto;
+}
+
+.content_container{
+    width: 100%;
+    height: 100%;
+}
+
+.content_container .side{
+    width: 100px;
+    height: 100%;
+    background-color: #D89C9C;
+}
+
+.content_container .content{
+    width: 100%;
+    height: 100%;
+    float: right;
+    width: 1200px;
+    padding: 0 30px;
+}
+
+.content_container .content .card{
+    width: 350px;
+    height: 500px;
+    background-color: #D89C9C;
+    margin-top: 50px;
+}
+
+
+
+.content_container .side_bar{
+    float: left;
+    width: 400px;
+    height: 100%;
+    background-color: #f7f7f7;
+}
+
+.content_container .side_bar .title{
+    margin: 100px  30px 20px 50px;
+}
+
+.content_container .side_bar li{
+    padding: 10px;
+    list-style: none;
+}
+
+.content_container .side_bar .title p{
+    font-size: 20pt;
+}
+
+.content_container .content .card .img-form{
+    background-color: #000000;
+    width: 100%;
+    height: 80%;
+}
+
+.content_container .content .card .text-form{
+    background-color: #333333;
+    width: 100%;
+    height: 20%;
+}
+
+.content_container .content .card .text-form .img{
+    background-color: red;
+    border-radius: 60px;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}

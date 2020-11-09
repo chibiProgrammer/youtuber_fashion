@@ -1,0 +1,9 @@
+create_table "groups", force: :cascade do |t|
+    t.string "name",  comment: "グループ名"
+    t.integer "brand_id", comment: "ブランドID"
+    t.string "infomation", comment: "グループ情報"
+    t.string "youtube_url", comment: "Youtube動画URL"
+    t.boolean "deleted_at", comment: "削除フラグ"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+end
