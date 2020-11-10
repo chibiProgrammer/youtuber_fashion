@@ -1,3 +1,6 @@
+# encoding: utf-8
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
 create_table "brands", force: :cascade do |t|
     t.string "name",  comment: "ブランド名"
     t.string "site_url", comment: "ブランドサイト"

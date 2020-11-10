@@ -2,7 +2,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# business
 require 'brands.schema'
 require 'groups.schema'
 require 'posts.schema'
