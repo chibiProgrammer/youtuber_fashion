@@ -1,15 +1,80 @@
 version: 2.1
-orbs:
-  ruby: circleci/ruby@0.1.2 
+
+executors:
+  default:
+    working_directory: ~/workspace
+    docker:
+      - image: circleci/ruby:2.6.5-node-browsers
+        environment:
+          BUNDLER_VERSION: 1.17.3
+      - image: circleci/postgres:12
+    environment:
+      - RAILS_ENV: test
+      - TEST_DATABASE_HOST: 127.0.0.1
+      - TEST_DATABASE_USERNAME: postgres
+      - TEST_DATABASE_PASSWORD:
+      - TEST_DATABASE_PORT: 5432
+      - TEST_DATABASE_NAME: herokura_test
+      - TEST_DATABASE_SCHEMA_SEARCH_PATH: public,salesforce
+      - PGHOST: 127.0.0.1
+      - PGUSER: postgres
+
+commands:
+  setup-bundler:
+    steps:
+      - run:
+          name: setup bundler
+          command: |
+            gem update bundler
+  bundle-install:
+    steps:
+      - restore_cache:
+          key: bundle-cache-{{ checksum "Gemfile" }}
+      - run:
+          name: install gems
+          command: bundle install --path vendor/bundle --jobs=4 --retry=3
+      - save_cache:
+          key: bundle-cache-{{ checksum "Gemfile" }}
+          paths:
+              - vendor/bundle
+  persist-workspace:
+    steps:
+      - persist_to_workspace:
+          root: ~/workspace
+          paths:
+            - ./*
+  attach-workspace:
+    steps:
+      - attach_workspace:
+          at: ~/workspace
+  lint:
+    steps:
+      - run:
+          name: rubocop
+          command: echo "good"
 
 jobs:
-  build:
-    docker:
-      - image: circleci/ruby:2.6.5-stretch-node
-    executor: ruby/default
+  setup:
+    executor:
+      name: default
     steps:
       - checkout
-      - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
+      - setup-bundler
+      - bundle-install
+      - persist-workspace
+  lint:
+    executor:
+      name: default
+    steps:
+      - attach-workspace
+      - setup-bundler
+      - bundle-install
+      - lint
+
+workflows:
+  build:
+    jobs:
+      - setup
+      - lint:
+          requires:
+            - setup
