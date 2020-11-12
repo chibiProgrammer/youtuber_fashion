@@ -18,6 +18,7 @@ executors:
       - TEST_DATABASE_SCHEMA_SEARCH_PATH: public,salesforce
       - PGHOST: 127.0.0.1
       - PGUSER: postgres
+      - POSTGRES_PASSWORD: password
 
 commands:
   setup-bundler:
