@@ -1,3 +1,177 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// header
+
+.y_header{
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.y_header_bar{
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+
+.y_header_bar .logo a{
+    color: black;
+}
+
+.y_header_bar .logo{
+    text-align: center;
+}
+
+.y_header_bar .bell{
+    position: absolute;
+    margin-left: 90%;
+    margin-top: 5px;
+}
+
+.y_header_bar .icon img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    margin-left: 93%;
+}
+
+
+.y_header_bar .input{
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 5px;
+}
+
+
+.y_header_bar .input .tbox{
+    height: 50px;
+    background-color:#EAEAEA;
+    border:none;
+}
+
+
+// main
+
+.main {
+    width: 100%;
+    position: relative;
+}
+
+.switch_type nav {
+    overflow: hidden;
+    height: 50px;
+    background: rgba(170, 221, 170, 0.21);
+}
+.switch_type ul{
+    list-style: none;
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 15px;
+}
+
+.switch_type li {
+    width: 140px;
+    float: left;
+}
+
+.switch_type a{
+    color: #B8B8B8;
+}
+
+// sidebar
+.sidebar{
+    overflow-y: scroll;
+}
+
+.sidebar_content {
+    border-bottom: 0.5px solid #B8B8B8;
+}
+
+.sidebar_content p{
+    color: #717171;
+    margin: 10px;
+}
+
+.sidebar_content li{
+    margin: 35px;
+    list-style: none;
+}
+
+.sidebar_content li i{
+    margin-right: 2em;
+}
+
+.sidebar_content li a{
+    color: #717171;
+}
+
+// main
+
+.content_container .side{
+    width: 100px;
+    height: 100%;
+    background-color: #D89C9C;
+}
+
+.content_container .content{
+    width: 100%;
+    height: 100%;
+    float: right;
+    margin-top: 100px;
+}
+
+.content_container .content .card{
+    height: 500px;
+    background-color: #D89C9C;
+    margin-top: 50px;
+    margin: 0px 130px 150px 130px;
+}
+
+
+
+.content_container .side_bar{
+    float: left;
+    height: 100%;
+    background-color: #f7f7f7;
+}
+
+.content_container .side_bar .title{
+    margin: 100px  30px 20px 50px;
+}
+
+.content_container .side_bar li{
+    padding: 10px;
+    list-style: none;
+}
+
+.content_container .side_bar .title p{
+    font-size: 20pt;
+}
+
+.content_container .content .card .img-form{
+    width: 100%;
+    height: 100%;
+}
+
+.content_container .content .card img{
+    width: 100%;
+    height: 100%;
+}
+
+.content_container .content .card .text-form{
+    background-color: #333333;
+    width: 100%;
+    height: 20%;
+}
+
+.content_container .content .card .text-form .img{
+    background-color: red;
+    border-radius: 60px;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
