@@ -17,4 +17,7 @@
 #  updated_at    :datetime         not null
 #
 class User < ApplicationRecord
+    self.table_name = "users"
+    belongs_to :groups, foreign_key: "group_id"
+    belongs_to :brands, foreign_key: "brand_id"
 end

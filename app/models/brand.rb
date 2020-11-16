@@ -10,4 +10,5 @@
 #  updated_at :datetime         not null
 #
 class Brand < ApplicationRecord
+    self.table_name = "brands"
 end

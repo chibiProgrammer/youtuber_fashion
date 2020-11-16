@@ -8,4 +8,7 @@
 #  updated_at :datetime         not null
 #
 class Tag < ApplicationRecord
+    self.table_name = "tags"
+    has_many :tag_maps
+    has_many :posts, through: :tag_maps
 end

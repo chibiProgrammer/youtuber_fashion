@@ -12,4 +12,6 @@
 #  updated_at  :datetime         not null
 #
 class Group < ApplicationRecord
+    self.table_name = "groups"
+    belongs_to :brands, foreign_key: "brand_id"
 end

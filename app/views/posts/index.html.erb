@@ -99,83 +99,19 @@
                 <div class="content_container">
                     <div class="content">
                         <div class="row">
-                            <div class="col-4">
-                                <div class="card">
-                                    <div class="img-form">
-                                      <img src="/assets/icon.png" alt="">
-                                    </div>
-                                    <div class="text-form">
-                                        <a class="img"></a>
-                                        <a class="text">東海オンエア-てつや-</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <div class="img-form">
-                                      <img src="/assets/icon.png" alt="">
-                                    </div>
-                                    <div class="text-form">
-                                        <a class="img"></a>
-                                        <a class="text">東海オンエア-りんご-</a>
+                            <% @posts.each do |post| %>
+                                <div class="col-4"> 
+                                    <div class="card">
+                                        <div class="img-form">
+                                        <img src="/assets/icon.png" alt="">
+                                        </div>
+                                        <div class="text-form">
+                                            <a class="img"></a>
+                                            <a class="text">東海オンエア-てつや-</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <div class="img-form">
-                                      <img src="/assets/icon.png" alt="">
-                                    </div>
-                                    <div class="text-form">
-                                        <a class="img"></a>
-                                        <a class="text">東海オンエア-りんご-</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <div class="img-form">
-                                      <img src="/assets/icon.png" alt="">
-                                    </div>
-                                    <div class="text-form">
-                                        <a class="img"></a>
-                                        <a class="text">東海オンエア-りんご-</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <div class="img-form">
-                                      <img src="/assets/icon.png" alt="">
-                                    </div>
-                                    <div class="text-form">
-                                        <a class="img"></a>
-                                        <a class="text">東海オンエア-りんご-</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <div class="img-form">
-                                      <img src="/assets/icon.png" alt="">
-                                    </div>
-                                    <div class="text-form">
-                                        <a class="img"></a>
-                                        <a class="text">東海オンエア-りんご-</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <div class="img-form">
-                                      <img src="/assets/icon.png" alt="">
-                                    </div>
-                                    <div class="text-form">
-                                        <a class="img"></a>
-                                        <a class="text">東海オンエア-りんご-</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <%end%>
                         </div>
                     </div>
                 </div>
