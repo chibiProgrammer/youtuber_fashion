@@ -9,4 +9,7 @@
 #  updated_at :datetime         not null
 #
 class TagMap < ApplicationRecord
+    self.table_name = "tag_maps"
+    belongs_to :posts, foreign_key: "post_id"
+    belongs_to :tags, foreign_key: "tag_id"
 end

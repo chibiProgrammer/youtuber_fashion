@@ -21,8 +21,16 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+<% 10.times do |n| %>
+user_<%= n + 1 %>:
+  youtuber_name: "mizuho"
+  image_url: '/assets/icon.png'
+  group_id: 1
+  brand_id: 1
+  age: "12"
+  infomation: "info"
+  birthplace: "aiueo"
+  height: "150cm"
+  youtube_url: 'https://www.youtube.com/watch?v=HfF38HJb5ic'
+  deleted_flag: 0
+<% end %>

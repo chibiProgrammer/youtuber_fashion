@@ -14,8 +14,10 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+
+<% 10.times do |n| %>
+groups_<%= n + 1 %>:
+  name: "mizuho"
+  site_url: 'https://www.youtube.com/watch?v=HfF38HJb5ic'
+  infomation: "text"
+<% end %>

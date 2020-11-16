@@ -14,4 +14,8 @@
 #  updated_at   :datetime         not null
 #
 class Post < ApplicationRecord
+    self.table_name = "posts"
+    belongs_to :users, foreign_key: "user_id"
+    has_many :tag_maps
+    has_many :tags, through: :tag_maps
 end
