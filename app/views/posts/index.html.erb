@@ -17,6 +17,9 @@
         <div class="input">
             <input class="tbox" type="text" name="name" size="30" maxlength="30" placeholder="ユーザーやハッシュタグを探す">
         </div>
+        <div class="post">
+            <i class="far fa-plus-square fa-3x" data-toggle="modal" data-target="#modal1"></i>
+        </div>
         <div class="bell">
             <i class="fas fa-bell fa-3x"></i>
         </div>
@@ -103,11 +106,11 @@
                                 <div class="col-4"> 
                                     <div class="card">
                                         <div class="img-form">
-                                        <img src="/assets/icon.png" alt="">
+                                            <img src=<%= post.images[0] %> alt="">
                                         </div>
                                         <div class="text-form">
-                                            <a class="img"></a>
-                                            <a class="text">東海オンエア-てつや-</a>
+                                            <a class="img"><img src=<%= post&.user&.image_url %>></a>
+                                            <a class="text"><%= post&.user&.youtuber_name %></a>
                                         </div>
                                     </div>
                                 </div>
@@ -115,12 +118,35 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
 </div>
 
+<!-- モーダルダイアログ -->
+  <div class="modal" id="modal1" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-show="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">投稿</h4>
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&#215;</span>
+          </button>
+        </div><!-- /modal-header -->
+        <%= form_tag("/posts", method: "posts") do %>
+            <div class="modal-body">
+                <p>本文</p>
+                <textarea class="recipient" rows="4" cols="48" placeholder = "入力してください"></textarea>
+            </div>
+            <div class="modal-footer">
+                <p type="text">画像を選択</p>
+                <input type="file" name="example" accept="image/jpeg, image/png">
+                <button type="submit" class="btn btn-default">投稿する</p>
+                <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+            </div>
+        <% end %>
+      </div> <!-- /.modal-content -->
+    </div> <!-- /.modal-dialog -->
+  </div> <!-- /.modal -->
 
 </html>

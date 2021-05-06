@@ -22,8 +22,8 @@
 <% 10.times do |n| %>
 post_<%= n + 1 %>:
   title: "title mizuho"
-  user_id: 1
-  text: '/assets/icon.png'
+  user:  <%= "user_#{(n + 1)}" %>
+  text: "テキストだよ"
   images: 
    - "/assets/icon.png"
   product_url: "https://www.youtube.com/watch?v=HfF38HJb5ic"

@@ -16,7 +16,7 @@
 #
 
 <% 10.times do |n| %>
-groups_<%= n + 1 %>:
+brand_<%= n + 1 %>:
   name: "mizuho"
   site_url: 'https://www.youtube.com/watch?v=HfF38HJb5ic'
   infomation: "text"
