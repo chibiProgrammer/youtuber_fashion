@@ -18,8 +18,8 @@ executors:
       - TEST_DATABASE_SCHEMA_SEARCH_PATH: public,salesforce
       - PGHOST: 127.0.0.1
       - PGUSER: postgres
-      - POSTGRES_HOST_AUTH_METHOD: 'trust'
       - POSTGRES_PASSWORD: password
+      - POSTGRES_HOST_AUTH_METHOD: 'trust'
 
 commands:
   setup-bundler:
