@@ -18,6 +18,7 @@
 #
 class User < ApplicationRecord
     self.table_name = "users"
+    has_many :posts
     belongs_to :groups, foreign_key: "group_id"
     belongs_to :brands, foreign_key: "brand_id"
 end

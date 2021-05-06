@@ -15,7 +15,7 @@
 #
 class Post < ApplicationRecord
     self.table_name = "posts"
-    belongs_to :users, foreign_key: "user_id"
+    belongs_to :user, foreign_key: "user_id", optional: true
     has_many :tag_maps
     has_many :tags, through: :tag_maps
 end

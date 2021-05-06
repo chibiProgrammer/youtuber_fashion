@@ -19,6 +19,7 @@ executors:
       - PGHOST: 127.0.0.1
       - PGUSER: postgres
       - POSTGRES_PASSWORD: password
+      - POSTGRES_HOST_AUTH_METHOD: 'trust'
 
 commands:
   setup-bundler:

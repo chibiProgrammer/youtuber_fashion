@@ -17,9 +17,9 @@
 # below each fixture, per the syntax in the comments below
 #
 <% 10.times do |n| %>
-groups_<%= n + 1 %>:
+group_<%= n + 1 %>:
   name: "mizuho"
-  brand_id: 1
+  brand_id: <%= "brand_#{(n + 1)}" %>
   infomation: "info"
   youtube_url: 'https://www.youtube.com/watch?v=HfF38HJb5ic'
   deleted_at: 0

@@ -13,6 +13,6 @@
 # below each fixture, per the syntax in the comments below
 #
 <% 10.times do |n| %>
-tags_<%= n + 1 %>:
+tag_<%= n + 1 %>:
   name: "楽しい"
 <% end %>
